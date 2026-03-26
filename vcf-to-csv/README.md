@@ -1,43 +1,36 @@
-# vcf-to-sql
+# vcf-to-csv
 
-Convert `.vcf` contact files into SQL `INSERT` statements.
+Convert `.vcf` contact files into CSV rows.
 
 ## Features
 
 - Parse contact names, phone numbers, emails, and addresses
 - Keep only contacts with a valid Israeli phone number
 - Use automatic fallback names for contacts without a reasonable name
-- Generate SQL for a configurable target table
 - Support custom `created_at` and `updated_at` column names
 - Support a custom date value for generated records
 
 ## Usage
 
 ```bash
-python vcf_to_sql.py contacts.vcf contacts.sql
-```
-
-## Custom table name
-
-```bash
-python vcf_to_sql.py contacts.vcf contacts.sql --table clients
+python vcf_to_csv.py contacts.vcf contacts.csv
 ```
 
 ## Custom timestamp columns
 
 ```bash
-python vcf_to_sql.py contacts.vcf contacts.sql --created-column created_at --updated-column updated_at
+python vcf_to_csv.py contacts.vcf contacts.csv --created-column created_at --updated-column updated_at
 ```
 
 ## Custom date
 
 ```bash
-python vcf_to_sql.py contacts.vcf contacts.sql --date 2026-03-27
+python vcf_to_csv.py contacts.vcf contacts.csv --date 2026-03-27
 ```
 
-## Requirements
+## Output columns
 
-The generated SQL assumes a table with these columns:
+The generated CSV contains these columns:
 
 - `name`
 - `phone`
