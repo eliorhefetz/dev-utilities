@@ -10,13 +10,6 @@ Encrypt and decrypt text using AES-GCM with a PBKDF2-derived key.
 - Derive the encryption key from a master passphrase with PBKDF2-HMAC-SHA256
 - Support both interactive mode and direct command-line arguments
 
-## Structure
-
-```text
-secret-codec/
-  README.md
-  secret_codec.py
-```
 
 ## Usage
 
